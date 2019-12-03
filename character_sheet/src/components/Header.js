@@ -1,5 +1,6 @@
 import React from 'react'
 import HeaderItem from './HeaderItem'
+import './Header.scss'
 
 const Header = () => {
   const items = [
