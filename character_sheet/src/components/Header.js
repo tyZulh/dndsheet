@@ -38,7 +38,14 @@ const Header = () => {
   return(
     <header className='header-wrapper'>
       {items.map(item => {
-          return (<HeaderItem title={item} handleData={handlePersonalData} value={characterPersonalData ? characterPersonalData.value : ''}></HeaderItem>)
+          return (
+            <HeaderItem
+              className='header-headerItem'
+              title={item}
+              handleData={handlePersonalData}
+              value={characterPersonalData ? characterPersonalData.value : ''}
+            />
+          )
         })}
     </header>
   )
