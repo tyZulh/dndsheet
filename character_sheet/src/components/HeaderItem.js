@@ -27,7 +27,8 @@ const HeaderItem = ({title, handleData}) => {
       className={edit ? 'headerItem-cellInput' : 'headerItem-notDisplayed'} 
       onChange={(event)=> setValue(event.target.value)}
       placeholder={value}
-    />
+    /
+    >
     <input 
       className={edit ? 'headerItem-editButton' : 'headerItem-notDisplayed'}
       type='button'

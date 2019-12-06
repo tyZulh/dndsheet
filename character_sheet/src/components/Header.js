@@ -1,33 +1,29 @@
 import React, {useState, useEffect} from 'react'
+import axios from 'axios'
 import HeaderItem from './HeaderItem'
 import './Header.scss'
 
+
 const Header = () => {
+  const path = process.env.REACT_APP_API_PATH
+
   const [characterPersonalData, setPersonalData] =  useState({})
+
   const items = [
     'Personnage',
     'Classes',
     'Niveau',
-    'genre',
+    'Genre',
     'Age',
     'Taille',
     'Poid',
   ]
 
   const handlePersonalData = (key, value) => {
-    console.log(characterPersonalData);
-    
-    console.log('key ', key, ', value ', value);
-    // if(!characterPersonalData){
-    //   return
-    // }
     const dataTmp = characterPersonalData
-    Object.assign(dataTmp, {key: value})
-    console.log(dataTmp);
-    
-    
     setPersonalData(dataTmp)
-    
+    axios.put(`${path}/character/:id/identity`, dataTmp)
+    .then(res =>res.data)
   }
 
   useEffect(()=>{
