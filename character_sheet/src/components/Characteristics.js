@@ -61,6 +61,7 @@ const characsMock = [
 ]
 
 const Characteristics = () => {
+<<<<<<< HEAD
   const [characteristics, setCharacteristics] = useState([])
 
   
@@ -90,6 +91,22 @@ const Characteristics = () => {
       {characsMock.map(charcteristic => {
         return (<CharacteristicLine data={charcteristic}/>)
       })}
+=======
+  const characteristics = [
+    "For",
+    "Dex",
+    "Con",
+    "Int",
+    "Sag",
+    "Char"
+  ]
+
+  return(
+    <div className='characteristics-wrapper'>
+        {this.characteristics.map(charcteristic => {
+          return (<CharacteristicLine data={charcteristic}/>)
+        })}
+>>>>>>> c793fd4... display the line for each characteristic
     </div>
   )
 }
