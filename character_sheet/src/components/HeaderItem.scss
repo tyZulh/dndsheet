@@ -1,0 +1,31 @@
+.headerItem-wrapper{
+  align-items: center;
+  display: flex;
+  font-size: 1,2rem;
+  margin: 12px 0;
+  width:  32vw;
+
+  .headerItem-cellData{
+    background-color: lightgrey;
+    font-size: 1rem;
+    margin-left: 1rem;
+    width: 10vw;
+  }
+  
+  .headerItem-cellInput {
+    background-color: lightgrey;
+    border: none;
+    display: block;
+    // font-size: 1rem;
+    margin-left: 1rem;
+    width: 5vw;
+  }
+
+  .headerItem-editButton {
+    border: none;
+  }
+
+  .headerItem-notDisplayed{
+    display: none
+  }
+}
