@@ -1,10 +1,14 @@
 import React, {useState} from 'react'
 import './HeaderItem.scss'
 
-const HeaderItem = ({title}) => {
+const HeaderItem = ({title, handleData}) => {
   const[edit, setEdit] = useState(false)
   const[value, setValue] = useState('')
-console.log(edit);
+
+  const sendData = () => {
+    setEdit(!edit)
+    handleData(title, value)
+  }
 
  return(
   <div className='headerItem-wrapper'>
@@ -16,7 +20,7 @@ console.log(edit);
       className={edit ? 'headerItem-notDisplayed' : 'headerItem-cellData'} 
       onClick={()=> setEdit(!edit)}
     >
-      {value}
+      {value ? value : title}
     </span>
 
     <input
@@ -24,11 +28,12 @@ console.log(edit);
       onChange={(event)=> setValue(event.target.value)}
       placeholder={value}
     />
+
     <input 
       className={edit ? 'headerItem-editButton' : 'headerItem-notDisplayed'}
       type='button'
       value='+'
-      onClick={()=> setEdit(!edit)}
+      onClick={()=> sendData()}
     />
 </div>
  )

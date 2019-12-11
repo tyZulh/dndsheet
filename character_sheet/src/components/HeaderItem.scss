@@ -1,14 +1,23 @@
 .headerItem-wrapper{
-  width:  20%;
+  align-items: center;
+  display: flex;
   font-size: 1,2rem;
   margin: 12px 0;
-  display: flex;
-
-  .headerItem-notDisplayed{
-    display: none
-  }
+  width:  32vw;
 
   .headerItem-cellData{
+    background-color: lightgrey;
+    font-size: 1rem;
+    margin-left: 1rem;
+    width: 10vw;
+  }
+  
+  .headerItem-cellInput {
+    background-color: lightgrey;
+    border: none;
+    display: block;
+    // font-size: 1rem;
+    margin-left: 1rem;
     width: 5vw;
   }
 
@@ -16,10 +25,7 @@
     border: none;
   }
 
-  .headerItem-cellInput {
-    display: block;
-    margin-left: 1rem;
-    width: 5vw;
-    font-size: 1.15rem;
+  .headerItem-notDisplayed{
+    display: none
   }
 }
