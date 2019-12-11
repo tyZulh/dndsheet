@@ -1,10 +1,22 @@
 import React from 'react'
+import CharacteristicLine from './CharacteriticLine'
 import './Characteristics.scss'
 
 const Characteristics = () => {
-  return(
-    <div>
+  const characteristics = [
+    "For",
+    "Dex",
+    "Con",
+    "Int",
+    "Sag",
+    "Char"
+  ]
 
+  return(
+    <div className='characteristics-wrapper'>
+        {this.characteristics.map(charcteristic => {
+          return (<CharacteristicLine data={charcteristic}/>)
+        })}
     </div>
   )
 }
