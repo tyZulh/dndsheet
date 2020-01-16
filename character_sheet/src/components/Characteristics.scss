@@ -1,0 +1,38 @@
+.characteristics-wrapper {
+  border: 1px black solid;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 4px;
+  padding: 10px;
+  
+
+  .characteristic-labels {
+    font-size: 0.75rem;
+    display: grid;
+    grid-template-columns: 4rem 4rem 14% 14% 14%  14% 14%;
+    grid-template-areas: '. total init alteration bonus malus modifier';
+    .characteristic-total {
+      grid-area: total;
+    }
+    .characteristic-initial {
+      grid-area: init;
+    }
+    .characteristic-alteration {
+      grid-area: alteration;
+    }
+    .characteristic-bonus {
+      grid-area: bonus;
+    }
+    .characteristic-malus {
+      grid-area: malus;
+    }
+    .characteristic-modifier {
+      grid-area: modifier;
+    }
+
+    .rotate {
+      transform: rotate(-45deg);
+    }
+  }
+}
